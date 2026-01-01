@@ -1,8 +1,11 @@
+import Header from '@/components/header';
+
 function App() {
   return (
     <>
-      <main>
-        <h1>Hello World</h1>
+      <Header />
+      <main className='min-h-dvh bg-gray-100 p-6'>
+        <h1 className='text-3xl mb-6'>🛒 Product Catalog</h1>
       </main>
     </>
   );
