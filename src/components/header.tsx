@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { useCart } from './providers/cart-provider';
+import { useCart } from '@/providers/cart-provider';
+import { CartSheet } from './cart-sheet';
 
 const Header = () => {
   const [isCartOpen, setIsCartOpen] = useState<boolean>(false);
@@ -21,7 +22,7 @@ const Header = () => {
       <Button
         variant='outline'
         size='icon'
-        className='relative bg-transparent'
+        className='relative bg-transparent cursor-pointer'
         onClick={() => setIsCartOpen(true)}
       >
         <ShoppingCart className='size-5' />
@@ -31,6 +32,15 @@ const Header = () => {
           </Badge>
         )}
       </Button>
+
+      <CartSheet
+        cart={cart}
+        isOpen={isCartOpen}
+        onClose={() => setIsCartOpen(false)}
+        total={Number(total)}
+        onRemove={removeFromCart}
+        onClearCart={clearCart}
+      />
     </header>
   );
 };
