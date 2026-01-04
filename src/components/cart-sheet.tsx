@@ -48,7 +48,7 @@ export function CartSheet({
             </div>
           </div>
         ) : (
-          <>
+          <div className='px-4'>
             <ul className='max-h-60 overflow-y-auto divide-y divide-gray-200'>
               {cart.map((item) => (
                 <li
@@ -85,12 +85,12 @@ export function CartSheet({
             <Button
               variant='destructive'
               size='lg'
-              className='w-full cursor-pointer'
+              className='w-full cursor-pointer mt-4'
               onClick={onClearCart}
             >
               Clear Cart
             </Button>
-          </>
+          </div>
         )}
       </SheetContent>
     </Sheet>

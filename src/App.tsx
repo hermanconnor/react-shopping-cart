@@ -1,4 +1,5 @@
 import Header from '@/components/header';
+import ProductList from './components/product-list';
 
 function App() {
   return (
@@ -6,6 +7,8 @@ function App() {
       <Header />
       <main className='min-h-dvh bg-gray-100 p-6'>
         <h1 className='text-3xl mb-6'>🛒 Product Catalog</h1>
+
+        <ProductList />
       </main>
     </>
   );
