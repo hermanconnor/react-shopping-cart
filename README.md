@@ -1,73 +1,96 @@
-# React + TypeScript + Vite
+# 🛒 Shopping Cart UI — Modern React & TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, fully typed shopping cart application built with React and TypeScript.
+This project is a reimplementation of a course project from **“Modern React From the Beginning”**, rebuilt from scratch.
 
-Currently, two official plugins are available:
+The focus of this project is learning and implementing React Context API with TypeScript.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📸 Screenshots / Demo
 
-## React Compiler
+![Shopping Cart Demo](public/img-1.webp)
+![Shopping Cart Demo](public/img-2.webp)
+![Shopping Cart Demo](public/img-3.webp)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🔍 Project Overview
 
-## Expanding the ESLint configuration
+This application demonstrates how to build a real-world React UI using modern tools and best practices:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Typed React components with **TypeScript**
+- Component-driven UI using **shadcn/ui**
+- Utility-first styling with **Tailwind CSS**
+- Local mock REST API using **json-server**
+- Fast development environment powered by **Vite**
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+The app simulates a small e-commerce experience, allowing users to browse products and manage a shopping cart.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🚀 Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **React**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS**
+- **shadcn/ui**
+- **json-server**
+
+## ✨ Features
+
+- Fetch products from a mock REST API
+- Add and remove items from the shopping cart
+- Derived cart totals
+- Fully responsive layout
+- Reusable, accessible UI components
+- Strongly typed API and component interfaces
+
+## ⚙️ Getting Started
+
+### Clone the repository
+
+```bash
+git clone https://github.com/hermanconnor/react-shopping-cart.git
+cd react-shopping-cart
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+### Start the mock API
+
+```bash
+npm run server
+```
+
+### Run the development server
+
+```bash
+npm run dev
+```
+
+Open:
+
+```
+http://localhost:5173
+```
+
+## 🔌 Mock API
+
+Powered by **json-server**, providing a simple REST interface.
+
+All data is stored locally in:
+
+```txt
+data/db.json
+```
+
+## 🎯 What This Project Demonstrates
+
+- React Context API with TypeScript
+- Component composition and reuse
+- API interaction and async state handling
+- Clean UI implementation with Tailwind + shadcn
+
+## 📜 License
+
+MIT License
